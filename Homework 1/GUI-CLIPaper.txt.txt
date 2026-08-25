@@ -1,0 +1,7 @@
+A GUI and a CLI are both ways that people can use a computer, but they work pretty differently. GUI stands for graphical user interface, while CLI stands for command-line interface.
+
+A GUI is what most people probably use every day. It has icons, buttons, menus, and windows that you can click on. Windows and macOS both use GUIs. They are usually easier to use because you don't have to memorize commands. You can just look at the screen and click what you need. The downside is that GUIs can sometimes use more computer resources.
+
+A CLI is different because you have to type commands instead of clicking on things. You would normally use it through a terminal or command prompt. It can be confusing at first because you have to know the right commands, but once you learn them, it can make some things a lot faster. It also gives you more control over what the computer is doing.
+
+I think GUIs are better for regular everyday use because they are easier to understand, but CLIs are useful if you know what you're doing and need to do more advanced stuff. Both are useful, it just depends on what you're using the computer for.
