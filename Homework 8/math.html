@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>Math Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var actualAnswer;
+        var correctAnswers = 0;
+        var incorrectAnswers = 0;
+        var questionNumber = 0;
+
+        function printQuestion() {
+            var number1 = Math.floor(Math.random() * 10) + 1;
+            var number2 = Math.floor(Math.random() * 10) + 1;
+            var operation = Math.floor(Math.random() * 4);
+            var symbol;
+
+            if (operation == 0) {
+                actualAnswer = number1 + number2;
+                symbol = "+";
+            }
+            else if (operation == 1) {
+                if (number2 > number1) {
+                    var temp = number1;
+                    number1 = number2;
+                    number2 = temp;
+                }
+
+                actualAnswer = number1 - number2;
+                symbol = "-";
+            }
+            else if (operation == 2) {
+                actualAnswer = number1 * number2;
+                symbol = "×";
+            }
+            else {
+                actualAnswer = number1;
+                number1 = number1 * number2;
+                symbol = "÷";
+            }
+
+            document.getElementById("question").innerHTML =
+                "What is " + number1 + " " + symbol + " " + number2 + "?";
+        }
+
+        function checkAnswer() {
+            var answer = document.getElementById("txtAnswer").value;
+
+            if (answer == actualAnswer) {
+                correctAnswers++;
+                document.getElementById("message").innerHTML = "Correct!";
+            }
+            else {
+                incorrectAnswers++;
+                document.getElementById("message").innerHTML = "Incorrect!";
+            }
+
+            questionNumber++;
+
+            if (questionNumber < 10) {
+                document.getElementById("txtAnswer").value = "";
+                document.getElementById("txtAnswer").focus();
+                printQuestion();
+            }
+            else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            var percentage = (correctAnswers / 10) * 100;
+
+            document.getElementById("question").innerHTML = "Game Over!";
+            document.getElementById("game").style.display = "none";
+
+            document.getElementById("results").innerHTML =
+                "Correct Answers: " + correctAnswers + "<br>" +
+                "Incorrect Answers: " + incorrectAnswers + "<br>" +
+                "Final Percentage: " + percentage + "%";
+        }
+    </script>
+</head>
+
+<body onload="printQuestion()">
+
+    <h1>Math Game</h1>
+
+    <h2 id="question"></h2>
+
+    <div id="game">
+
+        Your answer:
+        <input type="text" id="txtAnswer">
+
+        <button type="button" onclick="checkAnswer()">Submit</button>
+
+    </div>
+
+    <p id="message"></p>
+
+    <h2 id="results"></h2>
+
+    <br>
+
+    <a href="index.html">Home Page</a>
+
+    <br>
+
+    <a href="story.html">Story Page</a>
+
+    <br>
+
+    <a href="contact.html">Contact Page</a>
+
+</body>
+
+</html>

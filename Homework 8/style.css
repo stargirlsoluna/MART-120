@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f1f7;
+    color: #2f2733;
+    margin: 40px;
+}
+
+a {
+    color: #71527c;
+}
+
+.section-title {
+    color: #5c4168;
+    font-family: Georgia, serif;
+}
+
+.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#main-title {
+    color: #493452;
+}
+
+#favorite-websites {
+    background-color: #eee5f1;
+    padding: 15px 35px;
+}

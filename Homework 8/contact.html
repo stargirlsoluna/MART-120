@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Contact Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function validateForm() {
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var yes = document.getElementById("yes");
+        var no = document.getElementById("no");
+
+        name.style.backgroundColor = "white";
+        email.style.backgroundColor = "white";
+
+        if (name.value == "") {
+            name.style.backgroundColor = "red";
+            name.focus();
+            return false;
+        }
+
+        if (email.value == "") {
+            email.style.backgroundColor = "red";
+            email.focus();
+            return false;
+        }
+
+        if (!yes.checked && !no.checked) {
+            yes.focus();
+            alert("Please choose yes or no for the terms of agreement.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form onsubmit="return validateForm()">
+
+    Name: <input type="text" name="name" id="name" class="form-control">
+    <br>
+
+    Email Address: <input type="text" name="email" id="email" class="form-control">
+    <br>
+
+    <h2>Do you accept the terms of agreement?</h2>
+
+    <input type="radio" name="agreement" id="yes" value="yes">Yes
+    <br>
+
+    <input type="radio" name="agreement" id="no" value="no">No
+    <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+    <br>
+
+    <a href="index.html">Home Page</a>
+
+    <br>
+
+    <a href="story.html">Story Page</a>
+
+</body>
+
+</html>
