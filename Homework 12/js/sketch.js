@@ -1,30 +1,30 @@
-// PLAYER
+// player
 var playerX = 80;
 var playerY = 300;
 var playerSize = 35;
 
 
-// OBSTACLE ONE
+// obstacle one
 var obstacleOneX = 200;
 var obstacleOneY = 150;
 var obstacleOneXSpeed;
 var obstacleOneYSpeed;
 
 
-// OBSTACLE TWO
+// obstacle two
 var obstacleTwoX = 500;
 var obstacleTwoY = 420;
 var obstacleTwoXSpeed;
 var obstacleTwoYSpeed;
 
 
-// MOUSE OBSTACLE
+// mouse obstacle
 var mouseObstacleX = 0;
 var mouseObstacleY = 0;
 var showMouseObstacle = false;
 
 
-// GAME
+// game
 var won = false;
 
 
@@ -62,21 +62,21 @@ function draw()
 
 
 
-// PLAYER
+// player
 function createPlayer()
 {
-    fill(220,130,175);
+    fill(225,115,165);
     noStroke();
 
     circle(playerX,playerY,playerSize);
 
-    fill(250,210,225);
+    fill(250,190,215);
     circle(playerX,playerY,14);
 }
 
 
 
-// MOVE PLAYER
+// move player
 function movePlayer()
 {
     // W
@@ -106,7 +106,7 @@ function movePlayer()
 
 
 
-// KEYBOARD
+// keyboard
 function keyPressed()
 {
     movePlayer();
@@ -116,7 +116,7 @@ function keyPressed()
 
 
 
-// CREATE OBSTACLES
+// create obstacles
 function createObstacles()
 {
     // smaller blue obstacle
@@ -131,7 +131,7 @@ function createObstacles()
 
 
 
-// MOVE OBSTACLE ONE
+// move obstacle one
 function moveObstacleOne()
 {
     obstacleOneX += obstacleOneXSpeed;
@@ -158,7 +158,7 @@ function moveObstacleOne()
 
 
 
-// MOVE OBSTACLE TWO
+// move obstacle two
 function moveObstacleTwo()
 {
     obstacleTwoX -= obstacleTwoXSpeed;
@@ -185,7 +185,7 @@ function moveObstacleTwo()
 
 
 
-// BORDERS
+// borders
 function createBorders()
 {
     fill(80);
@@ -202,7 +202,7 @@ function createBorders()
 
 
 
-// EXIT
+// exit
 function createExit()
 {
     fill(120,200,150);
@@ -218,12 +218,12 @@ function createExit()
 
 
 
-// MOUSE OBSTACLE
+// mouse obstacle
 function createMouseObstacle()
 {
     if(showMouseObstacle == true)
     {
-        fill(120);
+        fill(150,160,230);
         noStroke();
 
         triangle(
@@ -241,7 +241,7 @@ function createMouseObstacle()
 
 
 
-// MOUSE CLICK
+// mouse click
 function mousePressed()
 {
     mouseObstacleX = mouseX;
@@ -252,7 +252,7 @@ function mousePressed()
 
 
 
-// WIN MESSAGE
+// win message
 function displayWin()
 {
     if(playerX >= 760 && playerY > 240 && playerY < 360)

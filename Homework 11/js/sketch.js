@@ -44,7 +44,7 @@ function draw()
 
 
     // exit
-    fill(120,190,150);
+    fill(120,200,150);
     rect(650,200,40,100);
 
     fill(255);
@@ -73,13 +73,13 @@ function draw()
 
 
     // player
-    fill(220,125,175);
+    fill(225,115,165);
     noStroke();
     circle(playerX,playerY,35);
 
 
     // obstacle 1
-    fill(110,150,220);
+    fill(110,150,190);
     circle(obstacle1X,obstacle1Y,45);
 
     obstacle1X += obstacle1MoveX;
@@ -107,7 +107,7 @@ function draw()
 
 
     // obstacle 2
-    fill(180,120,200);
+    fill(155,110,175);
     rect(obstacle2X,obstacle2Y,65,35);
 
     obstacle2X += obstacle2MoveX;
@@ -135,7 +135,7 @@ function draw()
 
 
     // mouse obstacle
-    fill(90,90,100);
+    fill(150,160,230);
     noStroke();
 
     triangle(
